@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore More - Bilyameen Collection</title>
+  <style>
+    /* ===== BASIC STYLES ===== */
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #0b0d0f, #050607);
+      color: white;
+      margin: 0;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header {
+      background: linear-gradient(90deg, #00c6a7, #0072ff);
+      padding: 25px;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 12px;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    main {
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeUp 1.2s ease-in-out;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    /* ===== GALLERY GRID ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      justify-items: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .gallery img {
+      width: 220px;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(0.8) rotate(-2deg);
+      animation: zoomIn 0.8s forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1) rotate(0deg);
+      box-shadow: 0 0 25px rgba(0, 255, 200, 0.4);
+    }
+
+    /* Staggered animation delays */
+    .gallery img:nth-child(1) { animation-delay: 0.2s; }
+    .gallery img:nth-child(2) { animation-delay: 0.4s; }
+    .gallery img:nth-child(3) { animation-delay: 0.6s; }
+    .gallery img:nth-child(4) { animation-delay: 0.8s; }
+    .gallery img:nth-child(5) { animation-delay: 1.0s; }
+    .gallery img:nth-child(6) { animation-delay: 1.2s; }
+    .gallery img:nth-child(7) { animation-delay: 1.4s; }
+    .gallery img:nth-child(8) { animation-delay: 1.6s; }
+    .gallery img:nth-child(9) { animation-delay: 1.8s; }
+    .gallery img:nth-child(10){ animation-delay: 2.0s; }
+
+    /* ===== KEYFRAME ANIMATIONS ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      to { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore More Glasses</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="shop.html">Shop the Drop</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Discover Our Full Range</h2>
+    <p>Explore 10 premium frames, crafted with elegance and precision.</p>
+
+    <div class="gallery">
+      <img src="glass1.jpg" alt="Frame 1">
+      <img src="glass2.jpg" alt="Frame 2">
+      <img src="glass3.jpg" alt="Frame 3">
+      <img src="glass4.jpg" alt="Frame 4">
+      <img src="glass5.jpg" alt="Frame 5">
+      <img src="glass6.jpg" alt="Frame 6">
+      <img src="glass7.jpg" alt="Frame 7">
+      <img src="glass8.jpg" alt="Frame 8">
+      <img src="glass9.jpg" alt="Frame 9">
+      <img src="glass10.jpg" alt="Frame 10">
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Bilyameen Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== BASIC STYLES ===== */
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0b0d0f;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header {
+      background-color: #00c6a7;
+      padding: 20px;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0b0d0f;
+    }
+
+    main {
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeUp 1.2s ease-in-out;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .product {
+      background: #111;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.2);
+      transform: scale(0.9);
+      opacity: 0;
+      animation: popIn 0.8s forwards;
+    }
+
+    .product:nth-child(1) { animation-delay: 0.3s; }
+    .product:nth-child(2) { animation-delay: 0.6s; }
+    .product:nth-child(3) { animation-delay: 0.9s; }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .product a {
+      display: inline-block;
+      background-color: #00c6a7;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .product a:hover {
+      background-color: #00e1b4;
+      transform: scale(1.05);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bilyameen Collection</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="explore.html">Explore More</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Shop the Drop</h2>
+    <p>Choose from our latest premium frames below 👇</p>
+
+    <div class="product-grid">
+      <div class="product">
+        <img src="glass1.jpg" alt="Classic Frame">
+        <p>Classic Frame – ₦25,000</p>
+        <a href="https://wa.me/2348138759240" target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="product">
+        <img src="glass2.jpg" alt="Bold Frame">
+        <p>Bold Frame – ₦30,000</p>
+        <a href="https://wa.me/2348138759240" target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="product">
+        <img src="glass3.jpg" alt="Minimal Frame">
+        <p>Minimal Frame – ₦28,000</p>
+        <a href="https://wa.me/2348138759240" target="_blank">Order on WhatsApp</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
